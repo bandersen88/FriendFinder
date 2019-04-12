@@ -1,0 +1,26 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Frind new friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingofthebanders/FriendFinder.git"
+  },
+  "keywords": [
+    "friends"
+  ],
+  "author": "Benjamin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kingofthebanders/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/kingofthebanders/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
