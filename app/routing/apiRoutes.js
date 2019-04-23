@@ -23,20 +23,38 @@ return res.json(false);
 });
 
 router.post("/friends", function(req, res) {
-    // req.body hosts is equal to the JSON post sent from the user
-    // This works because of our body parsing middleware
-    var newFriend = req.body;
 
-    // Using a RegEx Pattern to remove spaces from newCharacter
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    var newFriend = req.body;
     newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
 
-    console.log(newFriend);
+    var matchIndex = findMatch(newFriend);
 
     friends.push(newFriend);
-
-    res.json(newFriend);
+    res.json(friends[matchIndex]);
 });
 
+
+function findMatch(newFriend) {
+  let scoresArray =[];
+  let diffArray = [];
+  let diffScore = 0;
+  let diffIndex = 0;
+
+  for (let s of newFriend.scores) {
+    scoresArray.push(parseInt(s))
+  }
+
+  for(let f of friends) {
+    for(let i = 0; i < f.scores.length; i ++) {
+      diffScore += Math.abs(scoresArray[i]-parseInt(f.scores[i]))
+    }
+    diffArray.push(diffScore);
+    diffScore = 0;
+  }
+
+  diffIndex = diffArray.reduce((iMin, x, i, arr) => x < arr[iMin] ? i : iMin, 0);
+  
+  return diffIndex;
+}
 
 module.exports = router;

@@ -145,7 +145,7 @@ module.exports = [
     },
     {
       "name": "Anisur Rahman",
-      "photo": "test url",
+      "photo": "https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
       "scores": [
         "4",
         "4",
@@ -161,7 +161,7 @@ module.exports = [
     },
     {
       "name": "Anisur Rahman",
-      "photo": "photo URL",
+      "photo": "https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
       "scores": [
         "2",
         "2",
@@ -177,7 +177,7 @@ module.exports = [
     },
     {
       "name": "Anisur Rahman",
-      "photo": "photo URL",
+      "photo": "https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
       "scores": [
         "2",
         "2",
@@ -193,7 +193,7 @@ module.exports = [
     },
     {
       "name": "Anisur Rahman",
-      "photo": "photo URL",
+      "photo": "https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
       "scores": [
         "2",
         "2",
